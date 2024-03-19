@@ -12,7 +12,7 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-    origin: "http://mernbyeaam.app",
+    origin: "https://mernbyeaam.app",
     credentials: true
 }))
 app.use(cookieParser())
