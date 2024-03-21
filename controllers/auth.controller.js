@@ -34,7 +34,8 @@ const register = async (req, res) => {
             createdAt: newUser.createdAt,
             updatedAt: newUser.updatedAt,
             avatar: newUser.avatar,
-            favorites: newUser.favorites
+            favorites: newUser.favorites,
+            keyToken: token
         })
 
 
@@ -68,7 +69,8 @@ const login = async (req, res) => {
             createdAt: userFound.createdAt,
             updatedAt: userFound.updatedAt,
             avatar: userFound.avatar,
-            favorites: userFound.favorites
+            favorites: userFound.favorites,
+            keyToken: token
         })
 
 
@@ -128,7 +130,8 @@ const withGoogle = async (req, res) => {
             id: user._id,
             updatedAt: user.updatedAt,
             createdAt: user.createdAt,
-            favorites: user.favorites
+            favorites: user.favorites,
+            keyToken: token
         })
     } else {
         const generatePass = Math.random().toString(36).slice(-8)
@@ -151,7 +154,8 @@ const withGoogle = async (req, res) => {
             id: newUser._id,
             createdAt: newUser.createdAt,
             updatedAt: newUser.updatedAt,
-            favorites: newUser.favorites
+            favorites: newUser.favorites,
+            keyToken: token
         })
     }
     
